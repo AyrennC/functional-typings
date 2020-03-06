@@ -15,7 +15,7 @@ declare module '@google-cloud/vision' {
   export interface InputConfig {
     gcsSource: GcsSource;
     content?: Buffer;
-    mimeType: 'application/pdf' | 'image/tiff' | 'image/gif';
+    mimeType: string;
   }
 
   export interface GcsSource {
