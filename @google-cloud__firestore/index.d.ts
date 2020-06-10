@@ -6,12 +6,8 @@ declare module '@google-cloud/firestore' {
    * An object.
    */
   export interface FirestoreObject {
-    triggerResource: string;
-    eventType: string;
-    data: {
-      oldValue: DocumentReference;
-      updateMask: any;
-      value: DocumentReference;
-    };
+    oldValue: DocumentReference;
+    updateMask: any;
+    value: DocumentReference;
   }
 }
