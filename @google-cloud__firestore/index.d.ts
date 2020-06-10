@@ -1,13 +1,20 @@
 import  '@google-cloud/firestore';
 
 declare module '@google-cloud/firestore' {
-  import { DocumentReference } from '@google-cloud/firestore';
   /**
    * An object.
    */
   export interface FirestoreObject {
-    oldValue: DocumentReference;
+    oldValue: Document;
     updateMask: any;
-    value: DocumentReference;
+    value: Document;
+  }
+
+
+  export interface Document {
+    name: string
+    fields: unknown
+    createTime: Date
+    updateTime: Date
   }
 }
